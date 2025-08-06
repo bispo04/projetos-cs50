@@ -1,0 +1,83 @@
+/*estilo geral do site */
+body {
+    font-family: Arial, sans-serif; /*tipo de fonte */
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    margin: 0;
+    padding: 0;
+}
+
+/* titulo principal*/
+h1 {
+    color: #4B0082;     /* cor roxa escura */
+    text-align: center; /* centralizar o titulo*/
+}
+
+/* subtitulos (ex:h2)*/
+h2 {
+    color: #333;
+    margin-top: 30px;
+}
+
+/* paragrafos*/
+p {
+    fonte-size: 18px;
+    line-height: 1.5;
+}
+
+/* navegacao */
+nav {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* links dentro da navegacao */
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4B0082;
+    font-weight: bold
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* centralizar todo o conteudo */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.minha-foto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+.conteiner {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+}
+
+footer a {
+    color: #4B0082;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f2f2f2;
+}
+
+h3 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rebeccapurple;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Estilos para resposta correta/incorreta */
+.Correto {
+    background-color: green !important;
+    color: white;
+}
+
+.Incorreto {
+    background-color: red !important;
+    color: white;
+}
+
+#resposta1,
+#resultadoTexto {
+    font-weight: bold;
+    margin-top: 10px;
+}

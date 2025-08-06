@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="pergunta">
+    <h3>Qual é a capital do Brasil?</h3>
+    <button class="alternativa">São Paulo</button>
+    <button class="alternativa">Brasília</button>
+    <button class="alternativa">Rio de Janeiro</button>
+    <p id="resposta1"></p>
+</section>
+
+<section class="pergunta">
+    <h3>Qual é o país onde é ilegal ter apenas um porquinho-da-índia?</h3>
+    <input type="text" id="respostaTexto">
+    <button id="verificarResposta">Verificar</button>
+    <p id="resultadoTexto"></p>
+</section>
+
+<script>
+    // Parte 1 – Múltipla escolha
+    let botoes = document.querySelectorAll(".alternativa");
+
+    botoes.forEach(function(botao) {
+        botao.addEventListener("click", function() {
+            let resposta = botao.innerText;
+
+            // Limpa estilos anteriores
+            botoes.forEach(b => {
+                b.classList.remove("Correto", "Incorreto");
+            });
+
+            if (resposta === "Brasília") {
+                botao.classList.add("Correto");
+                document.getElementById("resposta1").innerText = "✔️ Resposta correta!";
+                botoes.forEach(b => {
+                    b.disabled = true;
+                    b.style.opacity = "0.6";
+                });
+            } else {
+                botao.classList.add("Incorreto");
+                document.getElementById("resposta1").innerText = "❌ Resposta incorreta!";
+            }
+        });
+    });
+
+    // Parte 2 – Resposta com texto
+    document.getElementById("verificarResposta").addEventListener("click", function () {
+        let inputTexto = document.getElementById("respostaTexto");
+        let resposta = inputTexto.value.trim().toLowerCase();
+
+        inputTexto.classList.remove("Correto", "Incorreto");
+
+        if (resposta === "suíça" || resposta === "suica") {
+            inputTexto.classList.add("Correto");
+            document.getElementById("resultadoTexto").innerText = "✔️ Resposta correta!";
+        } else {
+            inputTexto.classList.add("Incorreto");
+            document.getElementById("resultadoTexto").innerText = "❌ Resposta incorreta!";
+        }
+    });
+</script>
+
+</body>
+</html>
